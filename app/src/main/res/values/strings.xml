@@ -4,4 +4,5 @@
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="hello_sign_in_your_account">Hello, sign in your account</string>
+    <string name="gambar_login">Gambar Login</string>
 </resources>

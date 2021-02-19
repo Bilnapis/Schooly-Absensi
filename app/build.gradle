@@ -4,12 +4,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
 
     defaultConfig {
         applicationId "com.example.absensi"
-        minSdkVersion 23
-        targetSdkVersion 29
+        minSdkVersion 21
+        // Orang-orang masih menggunakan Android 5 sebagai daily drive mereka
+        targetSdkVersion 30
+        // Pastikan menggunakan versi Android terbaru & CompileSdkVersion
         versionCode 1
         versionName "1.0"
 

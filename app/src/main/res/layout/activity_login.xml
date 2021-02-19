@@ -61,7 +61,8 @@
                 android:hint="@string/password"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:inputType="textEmailAddress"/>
+                android:inputType="textEmailAddress"
+                />
 
         </com.google.android.material.textfield.TextInputLayout>
 

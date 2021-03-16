@@ -20,7 +20,6 @@ android {
        // BASE_URL
         buildConfigField "String", "BASE_URL", "\"https://schooly.my.id/\""
 
-
     }
 
     buildTypes {

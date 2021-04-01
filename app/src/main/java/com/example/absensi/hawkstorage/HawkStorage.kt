@@ -3,14 +3,13 @@ package com.example.absensi.hawkstorage
 import android.content.Context
 import com.example.absensi.model.User
 import com.orhanobut.hawk.Hawk
-
-class HawkStorage{
+class HawkStorage {
     companion object{
         private const val USER_KEY = "user_key"
         private const val TOKEN_KEY = "token_key"
         private val hawkStorage = HawkStorage()
 
-        fun instance(context: Context): HawkStorage{
+        fun instance(context: Context?): HawkStorage{
             Hawk.init(context).build()
             return hawkStorage
         }
@@ -35,7 +34,7 @@ class HawkStorage{
     }
 
     fun isLogin(): Boolean{
-        if(Hawk.contains(USER_KEY)){
+        if (Hawk.contains(USER_KEY)){
             return true
         }
         return false

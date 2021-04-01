@@ -38,7 +38,7 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             val email = binding.etEmailLogin.text.toString()
             val password = binding.etPasswordLogin.text.toString()
-            if(isFormValid(email, password)) {
+            if (isFormValid(email, password)){
                 loginToServer(email, password)
             }
         }
@@ -69,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
                                 HawkStorage.instance(this@LoginActivity).setToken(token)
                                 goToMain()
                             }
-                        } else {
+                        }else{
                             val errorConverter: Converter<ResponseBody, LoginResponse> =
                                     RetrofitClient
                                             .getClient()
@@ -87,7 +87,7 @@ class LoginActivity : AppCompatActivity() {
                                             errorResponse?.message.toString()
                                     )
                                 }
-                            } catch (e: IOException){
+                            }catch (e: IOException){
                                 e.printStackTrace()
                                 Log.e(TAG, "Error: ${e.message}")
                             }
@@ -111,14 +111,14 @@ class LoginActivity : AppCompatActivity() {
         if (email.isEmpty()){
             binding.etEmailLogin.error = getString(R.string.please_fill_your_email)
             binding.etEmailLogin.requestFocus()
-        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        }else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             binding.etEmailLogin.error = getString(R.string.please_use_valid_email)
             binding.etEmailLogin.requestFocus()
-        } else if (password.isEmpty()) {
+        }else if (password.isEmpty()){
             binding.etEmailLogin.error = null
             binding.etPasswordLogin.error = getString(R.string.please_fill_your_password)
             binding.etPasswordLogin.requestFocus()
-        } else {
+        }else{
             binding.etEmailLogin.error = null
             binding.etPasswordLogin.error = null
             return true
@@ -129,5 +129,4 @@ class LoginActivity : AppCompatActivity() {
     companion object{
         private val TAG = LoginActivity::class.java.simpleName
     }
-
 }

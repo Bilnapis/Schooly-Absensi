@@ -19,6 +19,7 @@ android {
 
        // BASE_URL
         buildConfigField "String", "BASE_URL", "\"https://schooly.my.id/siswa/\""
+        buildConfigField "String", "BASE_IMAGE_URL", "\"https://schooly.my.id/storage/profile/\""
 
     }
 

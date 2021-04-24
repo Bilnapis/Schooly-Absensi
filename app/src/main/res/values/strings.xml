@@ -38,4 +38,6 @@
     <string name="something_wrong">Something Wrong</string>
     <string name="you_already_present">You Already Present</string>
     <string name="success">Success</string>
+    <string name="your_password_has_been_update">Your Password has been update</string>
+    <string name="your_password_didnt_match">Your Password did\'nt match</string>
 </resources>

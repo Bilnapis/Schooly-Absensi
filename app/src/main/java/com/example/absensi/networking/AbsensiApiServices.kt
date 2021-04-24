@@ -1,9 +1,6 @@
 package com.example.absensi.networking
 
-import com.example.absensi.model.AttendanceResponse
-import com.example.absensi.model.HistoryResponse
-import com.example.absensi.model.LoginResponse
-import com.example.absensi.model.LogoutResponse
+import com.example.absensi.model.*
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -14,6 +11,10 @@ interface AbsensiApiServices {
     @Headers("Accept: application/json", "Content-Type: application/json")
     @POST("api/auth/login")
     fun loginRequest(@Body body: String): Call<LoginResponse>
+
+    @Headers("Accept: application/json", "Content-Type: application/json")
+    @POST("api/auth/password/forgot")
+    fun forgotPasswordRequest(@Body body: String): Call<ForgotPasswordResponse>
 
     @Multipart
     @Headers("Accept: application/json")

@@ -3,6 +3,7 @@ package com.example.absensi.networking
 import com.example.absensi.model.AttendanceResponse
 import com.example.absensi.model.HistoryResponse
 import com.example.absensi.model.LoginResponse
+import com.example.absensi.model.LogoutResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -29,4 +30,8 @@ interface AbsensiApiServices {
                              @Query("from") fromDate: String,
                              @Query("to") toDate: String
     ): Call<HistoryResponse>
+
+    @Headers("Accept: application/json", "Content-Type: application/json")
+    @POST("api/auth/logout")
+    fun logoutRequest(@Header("Authorization") token: String): Call<LogoutResponse>
 }

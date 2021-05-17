@@ -37,4 +37,11 @@
     <string name="success_check_out">Sukses Keluar</string>
     <string name="something_wrong">Ada yang salah</string>
     <string name="you_already_present">Kamu sudah absen</string>
+    <string name="success">Success</string>
+    <string name="your_password_has_been_update">Passwordmu berhasil diperbarui</string>
+    <string name="your_password_didnt_match">Passwordmu tidak cocok</string>
+    <string name="isi_data_kehadiran_lebih_mudah_dengan">Isi data kehadiran lebih mudah dengan</string>
+    <string name="powered_by">Powered by</string>
+    <string name="est_2020">EST 2020</string>
+    <string name="string_attendance_on_splash">Attendance</string>
 </resources>
